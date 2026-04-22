@@ -24,7 +24,8 @@
         </style>
 
         <!-- Scripts -->
-     @vite(['resources/css/app.css', 'resources/js/app.js'])
+     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
