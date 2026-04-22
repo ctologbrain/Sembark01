@@ -1,4 +1,30 @@
-Project Description
+## Setup Instructions
+
+1. Clone the project
+git clone <repo-url>
+
+2. Install dependencies
+composer install
+
+3. Copy env file
+cp .env.example .env
+
+4. Configure database in .env
+
+5. Generate key
+php artisan key:generate
+
+6. Run migrations
+php artisan migrate
+
+7. Seed database
+php artisan db:seed
+
+8. Run project
+php artisan serve
+
+
+## Project Description
 
 1. I have built this project in Laravel 12.
 2. For authentication, I have used Laravel Breeze.
@@ -33,3 +59,5 @@ c. Member:
 I have not used raw queries; I focused on using model relationships.
 For coding, I used Cursor AI tool.
 I did not copy any concept from ChatGPT or any browser.
+
+
