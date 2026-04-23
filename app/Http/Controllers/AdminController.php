@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreClientRequest;
+use App\Http\Requests\StoreAdminRequest;
 use App\Http\Requests\UpdateClientRequest;
 use App\Models\User;
 use App\Models\Client;
@@ -58,16 +58,16 @@ class AdminController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    public function store(StoreAdminRequest $request): RedirectResponse
     {
        
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'company' => ['required'],
-            'role' => ['required'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', Rules\Password::defaults()],
-        ]);
+        // $request->validate([
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'company' => ['required'],
+        //     'role' => ['required'],
+        //     'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+        //     'password' => ['required', Rules\Password::defaults()],
+        // ]);
 
         $user = User::create([
             'name' => $request->name,
